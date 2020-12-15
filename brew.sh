@@ -61,3 +61,9 @@ brew install spotify
 brew install qbittorrent
 brew install visual-studio-code
 
+
+# Cleanup Brew
+brew cleanup
+
+# Check integrity
+brew doctor
