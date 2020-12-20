@@ -12,7 +12,7 @@ echo 'Checking Homebrew installation...'
 #fi
 
 # Update to latest Homebrew
-  brew update
+brew update
 
 # Upgrade all formulae
 brew upgrade
