@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
+# macOS Defaults
+source macos_defaults.sh
+
+# Setup Mac
+source macos.sh
+
 # Homebrew installations
 source brew.sh
 
-# macOS Defaults
-source .macos
+# Install VSCode Extensions & Settings
+source vscode.sh

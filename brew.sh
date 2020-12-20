@@ -34,6 +34,7 @@ brew install mas
 # brew install ssh-copy-id
 brew install stow
 # brew install sqlite
+brew install tree
 # brew install zsh
 
 # zsh plugin dependencies
