@@ -236,6 +236,7 @@ dockutil --remove all
 
 dockutil --add '/System/Applications/Calendar.app'
 dockutil --add '/Applications/Google Chrome.app'
+dockutil --add '/Applications/Firefox Nightly.app'
 dockutil --add '/Applications/Visual Studio Code.app'
 dockutil --add '/System/Applications/Notes.app'
 dockutil --add '/Applications/iTerm.app'
@@ -298,7 +299,7 @@ defaults write com.apple.universalaccess closeViewPanningMode -int 0
 # --------
 
 # Prevent Music.app from responding to keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 # Set a blazingly fast keyboard repeat rate
 defaults write -g KeyRepeat -int 2

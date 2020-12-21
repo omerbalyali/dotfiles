@@ -16,7 +16,7 @@ ENABLE_CORRECTION="true"
 plugins=(autojump brew git zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting)
 
 SPACESHIP_PROMPT_ORDER=(
- time          # Time stamps section
+  time          # Time stamps section
   user          # Username section
   dir           # Current directory section
   host          # Hostname section

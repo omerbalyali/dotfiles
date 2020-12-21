@@ -35,7 +35,7 @@ brew install mas
 brew install stow
 # brew install sqlite
 brew install tree
-# brew install zsh
+# brew install zsh # Already installed and default shell in macOS 11
 
 # zsh plugin dependencies
 brew install autojump
@@ -46,29 +46,31 @@ brew install fzf
 brew tap homebrew/cask
 
 # Cask Apps
-brew install 1password
-brew install alfred
-brew install appcleaner
-brew install carbon-copy-cloner
-# brew install docker
-brew install expressvpn
-# brew install homebrew/cask-versions/firefox-nightly 
-brew install google-chrome
-# brew install homebrew/cask-versions/google-chrome-canary 
-# brew install google-drive
-brew install iina
-# brew install insomnia
-brew install istat-menus
-brew install iterm2
-brew install jettison
-brew install keka
-brew install little-snitch
-brew install monitorcontrol
-# brew install pgadmin4
-# brew install postman
-# brew install sourcetree
-brew install spotify
-brew install visual-studio-code
+brew install --cask 1password
+brew install --cask adobe-creative-cloud
+brew install --cask alfred
+brew install --cask appcleaner
+brew install --cask carbon-copy-cloner
+# brew install --cask docker
+brew install --cask expressvpn
+brew install --cask homebrew/cask-versions/firefox-nightly 
+brew install --cask google-chrome
+brew install --cask homebrew/cask-versions/google-chrome-canary 
+# brew install --cask google-drive
+brew install --cask iina
+# brew install --cask insomnia
+brew install --cask istat-menus
+brew install --cask iterm2
+brew install --cask jettison
+brew install --cask keka
+brew install --cask little-snitch
+brew install --cask monitorcontrol
+# brew install --cask pgadmin4
+# brew install --cask postman
+# brew install --cask sourcetree
+brew install --cask sip
+brew install --cask spotify
+brew install --cask visual-studio-code
 
 # Cleanup Brew
 brew cleanup
