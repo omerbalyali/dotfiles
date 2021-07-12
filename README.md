@@ -1,7 +1,5 @@
 # .dotfiles
 
----
-
 ## ⚠️ **Do not use the dotfiles as it is, feel free to fork or clone and customise for your use case.**
 
 This dotfiles repo contains an opinionated macOS development/regular-use environment with an automated setup, compatible with macOS 11 Big Sur.
