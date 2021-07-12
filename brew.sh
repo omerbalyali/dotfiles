@@ -8,7 +8,7 @@ echo 'Checking Homebrew installation...'
   # Install Homebrew
 #  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 #else
- # echo "Homebrew is already installed, moving on..."
+  # echo "Homebrew is already installed, moving on..."
 #fi
 
 # Update to latest Homebrew
@@ -30,7 +30,7 @@ brew install dockutil
 brew install git
 brew install mas
 # brew install openssl
-# brew install postgresql
+brew install postgresql
 # brew install ssh-copy-id
 brew install stow
 # brew install sqlite
@@ -51,21 +51,21 @@ brew install --cask adobe-creative-cloud
 brew install --cask alfred
 brew install --cask appcleaner
 brew install --cask carbon-copy-cloner
-# brew install --cask docker
+brew install --cask docker
 brew install --cask expressvpn
 brew install --cask homebrew/cask-versions/firefox-nightly 
 brew install --cask google-chrome
 brew install --cask homebrew/cask-versions/google-chrome-canary 
 # brew install --cask google-drive
 brew install --cask iina
-# brew install --cask insomnia
+brew install --cask insomnia
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask jettison
 brew install --cask keka
 brew install --cask little-snitch
 brew install --cask monitorcontrol
-# brew install --cask pgadmin4
+brew install --cask pgadmin4
 # brew install --cask postman
 # brew install --cask sourcetree
 brew install --cask sip
