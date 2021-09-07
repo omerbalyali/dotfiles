@@ -1,47 +1,47 @@
 {
-  "window.zoomLevel": 0,
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.tree.renderIndentGuides": "always",
-  "workbench.editor.closeOnFileDelete": true,
-  "explorer.confirmDelete": false,
-  "explorer.compactFolders": false,
-  "explorer.incrementalNaming": "smart",
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.letterSpacing": 0.25,
-  "editor.accessibilitySupport": "off",
-  "editor.fontFamily": "JetBrains Mono,  Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.lineHeight": 23,
-  "editor.letterSpacing": 0.25,
-  "editor.suggestSelection": "first",
-  "editor.renderWhitespace": "all",
-  "editor.autoClosingBrackets": "always",
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
-  "[jsonc]": {
-    "editor.quickSuggestions": {
-      "strings": true
-    },
-    "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "diffEditor.codeLens": true,
   "css.lint.emptyRules": "ignore",
   "css.lint.float": "warning",
   "css.lint.important": "warning",
   "css.lint.unknownAtRules": "warning",
   "css.lint.zeroUnits": "warning",
+  "diffEditor.codeLens": true,
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.letterSpacing": 0.25,
+  "editor.lineHeight": 23,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [90],
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
   "eslint.alwaysShowStatus": true,
-  "prettier.packageManager": "pnpm",
+  "eslint.packageManager": "pnpm",
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.incrementalNaming": "smart",
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 0,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "npm.packageManager": "pnpm",
   "prettier.jsxBracketSameLine": true,
   "prettier.jsxSingleQuote": true,
+  "prettier.packageManager": "pnpm",
   "prettier.singleQuote": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.letterSpacing": 0.25,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.renderIndentGuides": "always",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -50,6 +50,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -57,5 +64,12 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
+  },
+  "[postcss]": {
+    "gitlens.codeLens.scopes": ["document"]
+  },
+  "files.associations": {
+    "*.css": "css",
+    "*.json": "jsonc"
   }
 }
