@@ -7,7 +7,6 @@ eamodio.gitlens
 donjayamanne.githistory
 PKief.material-icon-theme
 oderwat.indent-rainbow
-CoenraadS.bracket-pair-colorizer-2
 Valiantsin.operatormonodarktheme
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
