@@ -15,7 +15,7 @@ curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js 
 # Install Rush
 pnpm add --global @microsoft/rush
 
-# Install Rush
+# Install Typescript
 pnpm add --global typescript
 
 # Install ESLint
