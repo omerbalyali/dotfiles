@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
+# --------
 echo 'Checking Homebrew installation...'
 
-#which -s brew
-#if [[ $? != 0 ]] ; then
-#  echo "No installation found. Installing Homebrew..."
-  # Install Homebrew
-#  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-#else
-  # echo "Homebrew is already installed, moving on..."
-#fi
+which -s brew
+if [[ $? != 0 ]] ; then
+  echo "No Homebrew installation found. Installing now..."
+# Install Homebrew
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+else
+ echo "Homebrew is already installed, moving on..."
+fi
 
 # Update to latest Homebrew
 brew update
@@ -41,9 +42,15 @@ brew install tree
 brew install autojump
 brew install fzf
 
+# --------
+echo 'Tapping Homebrew Casks'
 
 # Tap Casks
 brew tap homebrew/cask
+brew tap homebrew/cask-drivers
+
+# --------
+echo 'Installing Homebrew Cask Apps'
 
 # Cask Apps
 brew install --cask 1password
@@ -51,21 +58,22 @@ brew install --cask adobe-creative-cloud
 brew install --cask alfred
 brew install --cask appcleaner
 brew install --cask carbon-copy-cloner
-brew install --cask docker
+# brew install --cask docker
 brew install --cask expressvpn
+brew install --cask focusrite-control
 brew install --cask homebrew/cask-versions/firefox-nightly 
 brew install --cask google-chrome
 brew install --cask homebrew/cask-versions/google-chrome-canary 
 # brew install --cask google-drive
 brew install --cask iina
-brew install --cask insomnia
+# brew install --cask insomnia
 brew install --cask istat-menus
 brew install --cask iterm2
 brew install --cask jettison
 brew install --cask keka
 brew install --cask little-snitch
 brew install --cask monitorcontrol
-brew install --cask pgadmin4
+# brew install --cask pgadmin4
 # brew install --cask postman
 # brew install --cask sourcetree
 brew install --cask sip
@@ -77,3 +85,5 @@ brew cleanup
 
 # Check integrity
 brew doctor
+
+echo 'Brew process completed, moving on...'
