@@ -1,16 +1,6 @@
 #!/usr/bin/env bash
 
-echo 'New macOS environment is being initialized...'
-
-# --------
-# Software Update & Dev Tools
-
-# Update macOS to latest minor version
-sudo softwareupdate -i -r
-
-# Install macOS Command Line Tools
-xcode-select --install
-
+echo 'Oh-My-ZSH and Spaceship prompt is intalling...'
 
 # --------
 # ZSH
@@ -30,6 +20,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # chsh -s $(which zsh)
 
 
+echo 'Stowing dotfiles'
+
 # --------
 # Stow .dotfiles
 stow git
@@ -37,6 +29,8 @@ stow npm
 stow prettier
 stow zsh
 
+
+echo 'Installing apps from Mac App Store'
 
 # --------
 # Mas - https://github.com/mas-cli/mas
@@ -46,13 +40,3 @@ mas install 441258766
 
 # iA writer
 mas install 775737590
-
-
-# --------
-# Install Fonts
-
-
-
-
-# Post-install
-echo '🤖 Download Focusrite MixControl software 3.9 for Mac from https://focusrite.com/en'
