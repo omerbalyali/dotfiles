@@ -24,15 +24,15 @@ sudo -v
 # ##############
 
 # Create folders
-if [ ! -d "${HOME}/Development" ] 
-then
-    mkdir ~/Development
-fi
+# if [ ! -d "${HOME}/Development" ] 
+# then
+#     mkdir ~/Development
+# fi
 
-if [ ! -d "${HOME}/Screenshots" ] 
-then
-    mkdir ~/Screenshots 
-fi
+# if [ ! -d "${HOME}/Screenshots" ] 
+# then
+#     mkdir ~/Screenshots 
+# fi
 
 # ==============
 # Interface & Behaviour Changes
