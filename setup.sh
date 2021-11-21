@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Prepare the system
+source prepare.sh
+
 # macOS Defaults
 source macos_defaults.sh
 
