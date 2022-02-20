@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-# Install preferred extensions
-cat ./vscode_extensions.txt | xargs -n 1 code --install-extension
+echo '\n'
+echo '🟡 Installing VSCode extensions:'
+cat ./vscode-extensions.txt | xargs -n 1 code --install-extension
+
+echo '\n'
+echo '🟢 VSCode extensions are installed.'
+echo '\n'

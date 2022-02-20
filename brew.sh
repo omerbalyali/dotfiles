@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 
 # --------
-echo 'Checking Homebrew installation...'
+echo '🟡 Installing Homebrew:'
+echo '\n'
 
 which -s brew
 if [[ $? != 0 ]] ; then
-  echo "No Homebrew installation found. Installing now..."
-# Install Homebrew
+  echo '🔵 No Homebrew installation found. Installing now...'
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
- echo "Homebrew is already installed, moving on..."
+  echo '\n'
+  echo '🟢 Homebrew is already installed, moving on...'
 fi
+
+echo '\n'
+echo '🟡 Updating Homebrew:'
 
 # Update to latest Homebrew
 brew update
@@ -21,69 +25,101 @@ brew upgrade
 # Homebrew installation location
 BREW_LOCATION=$(brew --prefix)
 
+echo '\n'
+echo '🟡 Installing GNU Core Utils:'
+echo '\n'
+
 # Install GNU Core Utils
 brew install coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
-# Binaries
-# brew install ffmpeg
-brew install dockutil
-brew install git
-brew install mas
-# brew install openssl
-brew install postgresql
-# brew install ssh-copy-id
-brew install stow
-# brew install sqlite
-brew install tree
-# brew install zsh # Already installed and default shell in macOS 11
+echo '\n'
+echo '🟡 Installing other binaries:'
+echo '\n'
 
-# zsh plugin dependencies
-brew install autojump
-brew install fzf
+brew install \
+  ack \
+  bat \
+  dockutil \
+  ffmpeg \
+  fzf \
+  git \
+  mas \
+  postgresql \
+  rbenv \
+  ruby-build \
+  stow \
+  tree
 
-# --------
-echo 'Tapping Homebrew Casks'
+echo '\n'
+echo '🟡 Installing zsh dependencies:'
+echo '\n'
 
-# Tap Casks
+brew install \
+  autojump \
+# fzf
+
+echo '\n'
+echo '🟡 Tapping Casks:'
+echo '\n'
+
 brew tap homebrew/cask
 brew tap homebrew/cask-drivers
 
-# --------
-echo 'Installing Homebrew Cask Apps'
+echo '\n'
+echo '🟡 Installing Apps (casks):'
+echo '\n'
 
-# Cask Apps
-brew install --cask 1password
-brew install --cask adobe-creative-cloud
-brew install --cask alfred
-brew install --cask appcleaner
-brew install --cask carbon-copy-cloner
-# brew install --cask docker
-brew install --cask expressvpn
-brew install --cask focusrite-control
-brew install --cask homebrew/cask-versions/firefox-nightly 
-brew install --cask google-chrome
-brew install --cask homebrew/cask-versions/google-chrome-canary 
-# brew install --cask google-drive
-brew install --cask iina
-# brew install --cask insomnia
-brew install --cask istat-menus
-brew install --cask iterm2
-brew install --cask jettison
-brew install --cask keka
-brew install --cask little-snitch
-brew install --cask monitorcontrol
-# brew install --cask pgadmin4
-# brew install --cask postman
-# brew install --cask sourcetree
-brew install --cask sip
-brew install --cask spotify
-brew install --cask visual-studio-code
+brew install --cask \
+  1password \
+  adobe-creative-cloud \
+  appcleaner \
+  expressvpn \
+  homebrew/cask-versions/firefox-nightly \
+  google-chrome \
+  iina \
+  iterm2 \
+  keka \
+  little-snitch \
+  monitorcontrol \
+  raycast \
+  sip \
+  spotify \
+  visual-studio-code
 
-# Cleanup Brew
-brew cleanup
+if $extras
+then
+  echo "echo '🟡 Installing Extra Apps:'"
+fi
 
-# Check integrity
+if $music
+then
+  echo "echo '🟡 Installing Music Apps:'"
+  brew install --cask \
+    bitwig-studio \
+    ilok-license-manager
+fi
+
+if $personalized
+then
+  echo "echo '🟡 Installing Personalized Apps:'"
+  brew install --cask \
+    carbon-copy-cloner \
+    discord \
+    focusrite-control \
+    istat-menus \
+    jettison \
+fi
+
+echo '\n'
+echo '🟡 Cleaning up:'
+brew cleanup 
+
+echo '\n'
+echo '🟡 Checking integrity:'
 brew doctor
 
-echo 'Brew process completed, moving on...'
+
+echo '\n'
+echo '🟢 Homebrew & Apps are installed.'
+echo '\n'

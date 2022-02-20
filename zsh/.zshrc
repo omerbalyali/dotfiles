@@ -13,7 +13,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew git zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting)
+plugins=(autojump brew git macos colored-man-pages copydir zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting)
 
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
@@ -63,6 +63,10 @@ SPACESHIP_GIT_STATUS_DIVERGED=" diverged "
 source $ZSH/oh-my-zsh.sh
 
 
+# Custom colors for colored-man-pages
+less_termcap[md]="${fg_bold[blue]}"
+less_termcap[us]="${fg_bold[yellow]}"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
@@ -70,14 +74,23 @@ else
   export EDITOR='nano'
 fi
 
-# Aliases
-alias dev="cd /Volumes/Alpha/Projects/Development"  
-alias alpha="cd /Volumes/Alpha"  
-alias dev-isometric="cd /Volumes/Alpha/Projects/Development/Projects/open-source/isometric/new-monorepo"  
-alias dev-isometry="cd /Volumes/Alpha/Projects/Development/Projects/open-source/isometry/monorepo"  
-alias dev-isometry-new="cd /Volumes/Alpha/Projects/Development/Projects/open-source/isometry/test-monorepo"  
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# sbin
+export PATH="/usr/local/sbin:$PATH"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+
+
+# Dotfiles Aliases
+alias dotfiles="cd ~/.dotfiles"
+alias setup-mac="source ~/.dotfiles/setup.sh"
+alias update-brew="brew doctor && brew update && brew upgrade --greedy && brew cleanup"
+alias update-dock-mac="source ~/.dotfiles/dock.sh"
+alias update-node="export PREUPDATE_NODE=$(node -v) && nvm alias preupdate_version $PREUPDATE_NODE && nvm install --lts --default --reinstall-packages-from=node && nvm alias default lts/* && nvm use default && nvm uninstall preupdate_version && nvm unalias preupdate_version && unset PREUPDATE_NODE"
+alias update-mac="sudo softwareupdate -i -r && update-brew && update-dock-mac"
