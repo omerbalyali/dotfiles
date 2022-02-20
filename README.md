@@ -12,24 +12,26 @@ The Basic setup process is first installing the latest updates and Apple command
 
 Start with the most up to date state:
 
-```
-sudo softwareupdate -i -a
-xcode-select --install
-```
+Clone the repo to `~/.dotfiles` folder and setup with just one command:
 
 ```
-sh -c "`curl -fsSL https://raw.github.com/omerbalyali/dotfiles/master/remote-install.sh`"
 ./setup.sh
 ```
 
-## Install/Update Homebrew & Apps
+If you want to install extras, then add the argument `--extras` or `-e` to the script
 
 ```
-./brew.sh
+./setup.sh --extras
 ```
 
-## macOS defaults
+Music apps (`--music` or `-m`):
 
 ```
-source .macos_defaults
+./setup.sh --music
+```
+
+Personalized settings (`--personalized` or `-p`):
+
+```
+./setup.sh --personalized
 ```
