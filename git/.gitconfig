@@ -1,7 +1,11 @@
 [user]
-	email = omerbalyali@gmail.com
-	name = Ömer Balyali
-	username = omerbalyali
+name = Ömer Balyali
+username = omerbalyali
+
+[includeIf "gitdir:/Volumes/Alpha/Projects/Development/"]
+path = ~/.gitconfigs/.gitconfig.personal
+
+
 [alias]
 	a = add
 	c = commit
@@ -23,8 +27,6 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[credential]
-	helper = osxkeychain
 [commit]
 	template = /Users/alpha/.stCommitMsg
 [init]
