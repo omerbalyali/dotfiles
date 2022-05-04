@@ -13,7 +13,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew git macos colored-man-pages copydir zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting)
+plugins=(autojump brew git macos colored-man-pages copypath zsh-autosuggestions zsh-interactive-cd zsh-syntax-highlighting)
 
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
@@ -94,3 +94,5 @@ alias update-brew="brew doctor && brew update && brew upgrade --greedy && brew c
 alias update-dock-mac="source ~/.dotfiles/dock.sh"
 alias update-node="export PREUPDATE_NODE=$(node -v) && nvm alias preupdate_version $PREUPDATE_NODE && nvm install --lts --default --reinstall-packages-from=node && nvm alias default lts/* && nvm use default && nvm uninstall preupdate_version && nvm unalias preupdate_version && unset PREUPDATE_NODE"
 alias update-mac="sudo softwareupdate -i -r && update-brew && update-dock-mac"
+
+source ~/.dotfiles/aliases/personalized.sh
