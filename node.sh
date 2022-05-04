@@ -11,7 +11,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Install Node LTS
-nvm install --lts --default
+nvm install --lts
+
+nvm alias default 'lts/*'
+
+nvm use default
 
 # Update npm
 npm install -g npm@latest
