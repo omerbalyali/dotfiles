@@ -1,9 +1,10 @@
 [user]
-name = Ömer Balyali
-username = omerbalyali
+	name = Ömer Balyali
+	username = omerbalyali
+	email = omerbalyali@gmail.com
 
 [includeIf "gitdir:/Volumes/Alpha/Projects/Development/"]
-path = ~/.gitconfigs/.gitconfig.personal
+	path = ~/.gitconfigs/.gitconfig.personal
 
 
 [alias]
@@ -21,12 +22,6 @@ path = ~/.gitconfigs/.gitconfig.personal
 	smudge = git-lfs smudge -- %f
 [core]
 	excludesfile = /Users/alpha/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 	template = /Users/alpha/.stCommitMsg
 [init]
