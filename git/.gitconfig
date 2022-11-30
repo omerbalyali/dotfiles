@@ -1,5 +1,6 @@
 [user]
 	name = Ömer Balyali
+	name = Ömer Balyali
 	username = omerbalyali
 	email = omerbalyali@gmail.com
 
@@ -9,10 +10,13 @@
 
 [alias]
 	a = add
+	b = branch
 	c = commit
 	s = status
-	co = checkout
-	br = branch
+	sw = switch
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --oneline --graph
+	lgo = log --oneline
 	unstage = reset HEAD --
 	last = log -1 HEAD
 [filter "lfs"]
