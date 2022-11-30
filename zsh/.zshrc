@@ -96,3 +96,8 @@ alias update-node="export PREUPDATE_NODE=$(node -v) && nvm alias preupdate_versi
 alias update-mac="sudo softwareupdate -i -r && update-brew && update-dock-mac"
 
 source ~/.dotfiles/aliases/personalized.sh
+
+# pnpm
+export PNPM_HOME="/Users/alpha/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
