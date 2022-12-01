@@ -4,10 +4,6 @@
 	username = omerbalyali
 	email = omerbalyali@gmail.com
 
-[includeIf "gitdir:/Volumes/Alpha/Projects/Development/"]
-	path = ~/.gitconfigs/.gitconfig.personal
-
-
 [alias]
 	a = add
 	b = branch
@@ -19,14 +15,5 @@
 	lgo = log --oneline
 	unstage = reset HEAD --
 	last = log -1 HEAD
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-[core]
-	excludesfile = /Users/alpha/.gitignore_global
-[commit]
-	template = /Users/alpha/.stCommitMsg
 [init]
 	defaultBranch = main

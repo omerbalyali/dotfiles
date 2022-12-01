@@ -12,26 +12,4 @@ The Basic setup process is first installing the latest updates and Apple command
 
 Start with the most up to date state:
 
-Clone the repo to `~/.dotfiles` folder and setup with just one command:
-
-```
-./setup.sh
-```
-
-If you want to install extras, then add the argument `--extras` or `-e` to the script
-
-```
-./setup.sh --extras
-```
-
-Music apps (`--music` or `-m`):
-
-```
-./setup.sh --music
-```
-
-Personalized settings (`--personalized` or `-p`):
-
-```
-./setup.sh --personalized
-```
+Clone the repo to `~/.dotfiles` folder.
