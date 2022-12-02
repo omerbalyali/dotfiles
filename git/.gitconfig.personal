@@ -1,0 +1,7 @@
+[user]
+email = omerbalyali@gmail.com
+name = Ömer Balyali
+username = omerbalyali
+
+[core]
+sshCommand = "ssh -i ~/.ssh/omerbalyaliatgmailcom"

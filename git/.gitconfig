@@ -4,6 +4,12 @@
 	username = omerbalyali
 	email = omerbalyali@gmail.com
 
+[includeIf "gitdir:~/"]
+	path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/Development/Work"]
+	path = ~/.gitconfig.work
+
 [alias]
 	a = add
 	b = branch
