@@ -1,5 +1,4 @@
 [user]
-	name = Ömer Balyali
 	name = Ömer Balyali
 	username = omerbalyali
 	email = omerbalyali@gmail.com
@@ -7,7 +6,7 @@
 [includeIf "gitdir:~/"]
 	path = ~/.gitconfig.personal
 
-[includeIf "gitdir:~/Development/Work"]
+[includeIf "gitdir:~/Development/Work/"]
 	path = ~/.gitconfig.work
 
 [alias]
@@ -23,3 +22,7 @@
 	last = log -1 HEAD
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = false
+[gpg]
+	program = /usr/local/bin/gpg

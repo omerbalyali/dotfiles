@@ -1,7 +1,7 @@
 [user]
 email = oemer.balyali@lohnwerk.com
 name = Ömer Balyali
-username = oemer.balyali
+username = omerbalyali
 
 [core]
 sshCommand = "ssh -i ~/.ssh/oemerbalyaliatlohnwerkcom"
