@@ -1,29 +1,15 @@
-#!/usr/bin/env bash
+stow_target_directory=$HOME
 
-echo '\n'
-echo '🟡 Removing default config files:'
-rm ~/.zshrc
+# remove conflicting files
+files=(.gitconfig .zshrc)
+for file in "${files[@]}"; do
+	if [[ -f "$stow_target_directory/$file" ]]; then
+		rm ~/"$file"
+	fi
+done
 
-echo '\n'
-echo '🟡 Stowing config files:'
-stow git
-stow npm
-stow prettier
-stow zsh
-stow vscode
-
-
-echo '\n'
-echo '🟡 Adding shell aliases:'
-
-# if $personalized
-# then
-#   echo "\n GENERIC_ALIASES=false \n" >> ./zsh/.zshrc
-# else
-#   echo "\n GENERIC_ALIASES=true \n" >> ./zsh/.zshrc
-# fi
-
-
-echo '\n'
-echo '🟢 Config files are stowed/linked.'
-echo '\n'
+# stow directories to the target directory
+directories=(git npm zsh)
+for directory in "${directories[@]}"; do
+	stow $directory --target=$stow_target_directory
+done

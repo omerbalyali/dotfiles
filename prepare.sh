@@ -1,16 +1,11 @@
-#!/usr/bin/env bash
-
-
-# --------
-echo '🟡 Installing all new macOS updates (if there is any) and installing command-line tools:'
-echo '\n'
-
-# Update macOS to latest minor version
+# Install all remaining updates, if applicable
 sudo softwareupdate -i -a
 
-# Install macOS Command Line Tools
+# Install Apple Command Line Developer Tools
 xcode-select --install
 
-echo '\n'
-echo '🟢 macOS is updated, command-line tools are installed.'
-echo '\n'
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
