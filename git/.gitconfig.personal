@@ -1,0 +1,13 @@
+# =============================================================================
+# Personal Git Configuration
+# Included via: [includeIf "gitdir:~/"]
+# =============================================================================
+
+[user]
+	name = Ömer Balyalı
+	username = omerbalyali
+	email = git@omerbalyali.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBiyksY7Od101VMUBoTxWmqYKoiBdIlgtqCsHWUtF8tS
+
+[core]
+	sshCommand = "ssh -i ~/.ssh/git-at-omerbalyali-com"

@@ -1,0 +1,20 @@
+# pnpm global packages
+# Add packages here, one per line
+# Run 'pnpm-save' alias to update this file from current globals
+# Run 'pnpm-restore' alias to install all packages from this file
+
+# Node
+# node-gyp
+
+# TypeScript
+typescript
+ts-node
+
+# Code quality
+# eslint
+editorconfig-cli
+prettier
+
+# Utilities
+@microsoft/rush
+@nestjs/cli

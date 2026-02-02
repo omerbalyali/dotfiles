@@ -1,0 +1,188 @@
+# =============================================================================
+# Starship Prompt Configuration
+# Docs: https://starship.rs/config/
+# =============================================================================
+
+# Timeout for commands that take longer
+command_timeout = 1000
+
+# Newline between prompts
+add_newline = true
+
+# =============================================================================
+# Prompt Format
+# =============================================================================
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$docker_context\
+$cmd_duration\
+$line_break\
+$character"""
+
+# Right prompt (optional - shows time)
+# right_format = """$time"""
+
+# =============================================================================
+# Directory
+# =============================================================================
+[directory]
+style = "bold cyan"
+truncation_length = 4
+truncate_to_repo = true
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[directory.substitutions]
+"~/Development" = "󰲋 dev"
+"~/Development/Work" = "󰲋 work"
+"~/Development/Personal" = "󰲋 personal"
+"~/.dotfiles" = " dotfiles"
+
+# =============================================================================
+# Git
+# =============================================================================
+[git_branch]
+style = "bold purple"
+format = "[$symbol$branch(:$remote_branch)]($style) "
+symbol = " "
+
+[git_status]
+style = "bold yellow"
+format = '([$all_status$ahead_behind]($style) )'
+conflicted = "⚔️ "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "?${count} "
+stashed = "󰏗 "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+
+# =============================================================================
+# Languages & Runtimes
+# =============================================================================
+[nodejs]
+style = "bold green"
+format = "[$symbol($version )]($style)"
+symbol = " "
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+detect_folders = ["node_modules"]
+
+[python]
+style = "bold yellow"
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+detect_extensions = ["py"]
+detect_files = [".python-version", "Pipfile", "pyproject.toml", "requirements.txt"]
+
+[rust]
+style = "bold red"
+format = "[$symbol($version )]($style)"
+symbol = "🦀 "
+
+[docker_context]
+style = "bold blue"
+format = "[$symbol$context]($style) "
+symbol = " "
+only_with_files = true
+
+# =============================================================================
+# Command Duration
+# =============================================================================
+[cmd_duration]
+min_time = 2000  # Show if command takes > 2 seconds
+style = "bold yellow"
+format = "took [$duration]($style) "
+
+# =============================================================================
+# Character (Prompt Symbol)
+# =============================================================================
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+
+# =============================================================================
+# Time (optional - uncomment to show)
+# =============================================================================
+# [time]
+# disabled = false
+# style = "bold dimmed white"
+# format = "[$time]($style)"
+# time_format = "%H:%M"
+
+# =============================================================================
+# Disabled Modules (for faster prompt)
+# =============================================================================
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[terraform]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[package]
+disabled = true
+
+[php]
+disabled = true
+
+[ruby]
+disabled = true
+
+[java]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[golang]
+disabled = true
+
+[swift]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[erlang]
+disabled = true
+
+[haskell]
+disabled = true
+
+[julia]
+disabled = true
+
+[nim]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[perl]
+disabled = true
+
+[scala]
+disabled = true
+
+[zig]
+disabled = true
