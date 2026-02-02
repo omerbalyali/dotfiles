@@ -6,7 +6,6 @@
 # Taps
 # =============================================================================
 
-tap "homebrew/bundle"
 tap "buo/cask-upgrade"          # For 'brew cu' cask upgrade command
 
 # =============================================================================
@@ -79,7 +78,7 @@ cask "warp"                     # Modern AI terminal
 cask "visual-studio-code"       # Code editor
 cask "cursor"                   # AI-powered code editor
 cask "codex"                    # AI code assistant
-cask "docker"                   # Docker Desktop
+cask "docker-desktop"           # Docker Desktop
 cask "fork"                     # Git GUI client
 cask "gitkraken"                # Git GUI client
 
