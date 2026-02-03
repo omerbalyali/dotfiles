@@ -16,5 +16,6 @@ editorconfig-cli
 prettier
 
 # Utilities
+turborepo
 @microsoft/rush
 @nestjs/cli
