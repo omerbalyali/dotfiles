@@ -45,6 +45,7 @@
 	unstage = reset HEAD --
 	undo = reset --soft HEAD~1
 	amend = commit --amend --no-edit
+	first-push = push origin main --set-upstream
 
 	# Branch management
 	branches = branch -a
