@@ -56,11 +56,11 @@ brew "pre-commit"               # Git hooks framework
 brew "yamllint"                 # YAML linter
 
 # Font Tools
-# brew "fonttools"              # Font manipulation tools
+brew "fonttools"                # Font manipulation tools
 # brew "sfnt2woff"              # WOFF font converter
+# brew "woff2"                  # WOFF2 font converter
 # tap "bramstein/webfonttools"
 # brew "bramstein/webfonttools/sfnt2woff-zopfli" # WOFF font converter with Zopfli compression
-# brew "woff2"                  # WOFF2 font converter
 
 # =============================================================================
 # Cask Applications
@@ -77,7 +77,8 @@ cask "warp"                     # Modern AI terminal
 # -----------------------------------------------------------------------------
 cask "visual-studio-code"       # Code editor
 cask "cursor"                   # AI-powered code editor
-cask "codex"                    # AI code assistant
+cask "codex"                    # AI code assistant CLI
+cask "codex-app"                # AI code assistant GUI
 cask "docker-desktop"           # Docker Desktop
 cask "fork"                     # Git GUI client
 cask "gitkraken"                # Git GUI client
