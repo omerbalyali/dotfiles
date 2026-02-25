@@ -62,6 +62,11 @@ brew "fonttools"                # Font manipulation tools
 # tap "bramstein/webfonttools"
 # brew "bramstein/webfonttools/sfnt2woff-zopfli" # WOFF font converter with Zopfli compression
 
+# -----------------------------------------------------------------------------
+# AI Tools
+# -----------------------------------------------------------------------------
+brew "gemini-cli"               # AI code assistant CLI
+
 # =============================================================================
 # Cask Applications
 # =============================================================================
