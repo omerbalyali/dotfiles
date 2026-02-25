@@ -86,7 +86,9 @@ cask "codex"                    # AI code assistant CLI
 cask "codex-app"                # AI code assistant GUI
 cask "docker-desktop"           # Docker Desktop
 cask "fork"                     # Git GUI client
-cask "gitkraken"                # Git GUI client
+# cask "gitkraken"              # Git GUI client
+cask "tower"                    # Git GUI client
+cask "juxtacode"                # Diff & Merge Tool
 
 # -----------------------------------------------------------------------------
 # Productivity
